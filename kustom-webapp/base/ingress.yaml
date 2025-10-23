@@ -7,9 +7,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - http:
+  - host: "kubernetes.adoki.hadoop.local"
+    http:
       paths:
-      - path: /kustom_web_app
+      - path: /mywebapp
         pathType: Prefix
         backend:
           service:
